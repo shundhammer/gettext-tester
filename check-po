@@ -1,0 +1,17 @@
+#!/bin/sh
+#
+# Check a .po file and convert it to a .mo file
+#
+# Usage:
+#
+#     check-po [myfile.po]
+#     check-po [myfile]
+
+INPUT_FILE=${1:-hello-01.po}
+BASE_NAME=$(basename $INPUT_FILE ".po")
+PO_FILE=$BASE_NAME.po
+MO_FILE=$BASE_NAME.mo
+
+set -x
+msgfmt -c -o $MO_FILE $PO_FILE
+
