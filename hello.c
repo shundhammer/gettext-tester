@@ -7,6 +7,10 @@
  *
  * (yes, this works without a Makefile)
  *
+ * Extract the messages with
+ *
+ *     xgettext -k_ -o hello.pot hello.c
+ *
  * Author:  Stefan Hundhammer <shundhammer@suse.de>
  * License: GPL V2
  **/
@@ -26,7 +30,8 @@ int main( int argc, char **argv )
     bindtextdomain( TEXTDOMAIN, "/usr/share/locale" );
     textdomain( TEXTDOMAIN );
     
-    printf( _( "Hello, world!\n" ) );
+    printf( _( "Hello, world!\n"    ) );  // printf -> recognized as c-format
+    puts  ( _( "How are you today?" ) );  // no c-format
 
     printf( _( "printf-like parameters %s and %s\n" ), "foo", "bar" );
     printf( _( "Numbered printf parameters %2$s and %1$s\n" ), "foo", "bar" );
