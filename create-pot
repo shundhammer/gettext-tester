@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -x
+xgettext -k_ -o hello.pot hello.c
+
