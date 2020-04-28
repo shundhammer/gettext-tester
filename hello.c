@@ -36,11 +36,12 @@ int main( int argc, char **argv )
     printf( _( "printf-like parameters %s and %s\n" ), "foo", "bar" );
     printf( _( "Numbered printf parameters %2$s and %1$s\n" ), "foo", "bar" );
 
+    // xgettext:ycp-format
+    puts( _( "sformat-like message with parameters %1 and %2" ) );
     
     // Just emulating YaST / Ruby style for the gettext tools;
     // this does not do anyting useful with plain C/C++:
-    
-    puts( _( "sformat-like message with parameters %1 and %2" ) );
+
     puts( _( "Named parameters %{foo} and %{bar}" ) );
     puts( _( "Named parameters %<foo> and %<bar>" ) );
 }

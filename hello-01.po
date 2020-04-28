@@ -39,6 +39,7 @@ msgid "Numbered printf parameters %2$s and %1$s\n"
 msgstr "Numerierte printf-parameter %2$s und %1$s\n"
 
 #: hello.c:43
+#, ycp-format
 msgid "sformat-like message with parameters %1 and %2"
 msgstr "sformat-artiger Text mit Parametern %1 und %2"
 
